@@ -26,9 +26,13 @@ function App() {
     },
   ];
 
+  const AddExpense = (expenseData) => { 
+    expenses.push(expenseData); 
+  }
+
   return (
     <div>
-      <NewExpenses />
+      <NewExpenses onAddExpense = {AddExpense} />
       <Expenses items = {expenses}/>
     </div>
   );
